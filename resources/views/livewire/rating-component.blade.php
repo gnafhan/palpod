@@ -93,7 +93,7 @@ function timeAgo($time, $short = false){
 </style>
 <div>
     {{-- Success is as dangerous as failure. --}}
-    <div class="modal show" tabindex="-1" role="dialog" style="display: block; --bs-modal-width: 800px;" >
+    <div class="modal show" tabindex="-1" role="dialog" style="display: block; --bs-modal-width: 800px; position: relative; z-index: 0; padding-top: 3rem;" >
   <div class="modal-dialog">
     <div class="modal-content mb-3 shadow rounded" style="border: none !important;">
       

@@ -17,4 +17,4 @@ use App\Livewire\RatingComponent;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/rating/{spotifyId}', RatingComponent::class)->name('Rating');
+Route::get('/podcast-episode/{spotifyId}', RatingComponent::class);

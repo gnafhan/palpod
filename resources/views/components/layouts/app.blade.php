@@ -10,8 +10,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
+          .fa-star {
+            color: lightgoldenrodyellow;
+          }
             .checked {
-  color: orange;
+  color: yellow;
 }
             /* fieldset {
   border: 0;
@@ -48,11 +51,11 @@
   display: inline-block;
   text-indent: -9999px;
   content: "☆";
-  color: #888;
+  color: yellow;
 }
 .star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
   content: "★";
-  color: #e52;
+  color: yellow;
   text-shadow: 0 0 1px #333;
 }
 .star-cb-group > .star-cb-clear + label {
@@ -65,21 +68,37 @@
 }
 .star-cb-group:hover > input + label:before {
   content: "☆";
-  color: #888;
+  color: yellow;
   text-shadow: none;
 }
 .star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
   content: "★";
-  color: #e52;
+  color: yellow;
   text-shadow: 0 0 1px #333;
 }
         </style>
     </head>
     <body>
+    <div class="d-flex align-items-center text-white rounded-pill px-4 py-2" style="position:fixed; z-index: 2; width: 95%; background-color:teal; margin-top:1rem; transform: translateX(-50%); left: 50%;">
+    <img class="rounded-circle" src="https://www.figma.com/file/byUZrI9RxByAqJTLKzEASa/image/13375f406ce6302d02f4ff9782784a973e7a6b49" alt="Logo" class="me-2" style="height: 40px;">
+    <h5 class="fw-bold" style="padding-left: 0.25rem; margin-bottom:0">PALPOD</h5>
+    </div>
     <div class="container">
     
     {{ $slot }}
     
     </div>
+    <footer class="text-white py-3" style="background-color:teal">
+    <div class="container d-flex justify-content-between align-items-center" style="margin-top: 1rem; margin-bottom: 1rem;">
+      <small class="text-center">
+        This website is powered by the Software Engineering Laboratory (Lab RPL) | DTEDI | Sekolah Vokasi | UGM
+      </small>
+      <div class="d-flex">
+        <span class="ms-2 text-white"><img width="20px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="rounded-circle" alt="..."></span>
+        <span class="ms-2 text-white"><img width="20px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="rounded-circle" alt="..."></span>
+        <span class="ms-2 text-white"><img width="20px" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="rounded-circle" alt="..."></span>
+      </div>
+    </div>
+  </footer>
     </body>
 </html>
