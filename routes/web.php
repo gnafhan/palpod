@@ -14,7 +14,7 @@ use App\Livewire\RatingComponent;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get("/", function () {
+    return view("welcome");
 });
-Route::get('/podcast-episode/{spotifyId}', RatingComponent::class);
+Route::get("/podcast-episode/{spotifyId}", RatingComponent::class);
