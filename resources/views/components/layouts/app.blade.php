@@ -159,7 +159,7 @@ body{
 
     </head>
     <body>
-    <div class="d-flex align-items-center text-white rounded-pill px-4" style="position:fixed; height: 80px; z-index: 2; width: 95%; background: linear-gradient(131.03deg, #51B2B8 -69.42%, #244F52 266.05%); top: 2%; transform: translateX(-50%); left: 50%;">
+    <div class="d-flex align-items-center text-white rounded-pill px-4 mt-3" style="position:relative; height: 80px; z-index: 2; width: 95%; background: linear-gradient(131.03deg, #51B2B8 -69.42%, #244F52 266.05%); top: 2%; transform: translateX(-50%); left: 50%;">
     <img class="rounded-circle" src="https://www.figma.com/file/byUZrI9RxByAqJTLKzEASa/image/13375f406ce6302d02f4ff9782784a973e7a6b49" alt="Logo" class="me-4" style="height: 60px;">
     <h5 class="fw-bold fs-2" style="padding-left: 0.25rem; margin-bottom:0">PALPOD</h5>
     </div>
