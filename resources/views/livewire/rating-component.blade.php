@@ -92,7 +92,7 @@ function timeAgo($time, $short = false)
 } ?>
 
 <div>
-    <div class="modal show" tabindex="-1" role="dialog" style="display: block; --bs-modal-width: 800px; position: relative; z-index: 0; padding-top: 3rem; margin-top: 50px">
+    <div class="modal show" tabindex="-1" role="dialog" style="display: block; --bs-modal-width: 800px; position: relative; z-index: 0;">
         <div class="modal-dialog" style="" >
             <div class="modal-content mb-3 shadow rounded" style="border: none !important; border-radius: 24px !important">
                 <form wire:submit="store">
@@ -105,6 +105,14 @@ function timeAgo($time, $short = false)
                         @endif
                         <div class="d-flex justify-content-between">
                             <label class="form-label" style=""><h5 style="font-weight: 700">Leave a Review</h5></label>
+                            <div class="card-title" style="display: inline-block">
+                                <span>{{$rate}}</span>
+                            <span class="fa fa-star {{$rate >=0.5 ? 'checked' : ''}}"></span>
+                    <span class="fa fa-star {{$rate >=1.5 ? 'checked' : ''}}"></span>
+                    <span class="fa fa-star {{$rate >=2.5 ? 'checked' : ''}}"></span>
+                    <span class="fa fa-star {{$rate >=3.5 ? 'checked' : ''}}"></span>
+                    <span class="fa fa-star {{$rate >=4.5 ? 'checked' : ''}}"></span>
+                            </div>
                         </div>
                         <div class="mb-1" style="display:flex;align-items : center;">
                             <label class="form-label" style="margin-right: 10px; font-size: 16px">Your Rating </label>
@@ -135,10 +143,10 @@ function timeAgo($time, $short = false)
             <div class="">
                 <div class="modal-content card mb-3 shadow" style="border: none !important; max-width: 100%; border-radius: 30px">
                     <div class="row g-0">
-                        <div class="col-md-1 d-flex justify-content-end align-items-start" style="margin-top: 16px">
-                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style=" width: 50px" class="img-fluid rounded-circle" alt="...">
+                        <div class="col-1 d-flex justify-content-end align-items-start" style="margin-top: 16px">
+                            <img src="/avatar.png" style=" width: 50px" class="img-fluid rounded-circle" alt="...">
                         </div>
-                        <div class="col-md-11">
+                        <div class="col-11">
                             <div class="card-body">
                                 <div class="card-title mb-2 d-flex justify-content-between" style="margin-top: 0.5rem;">
                                     <h6>{{ $rating->name }}</h6>
