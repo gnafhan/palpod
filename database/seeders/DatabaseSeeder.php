@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         //
+
         Spotify::create([
             "link" => "0383ZXseCieN99WDVOX48c",
         ]);
