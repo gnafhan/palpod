@@ -1,157 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Coming Soon TRPL</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Countdown</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-image: url('/bg-countdown.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        .countdown-container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 800px;
-            width: 90%;
-        }
-
-        .title {
-            color: #fff;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 300;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .countdown-item {
-            text-align: center;
-            min-width: 100px;
-        }
-
-        .countdown-number {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-            margin-bottom: 0.5rem;
-        }
-
-        .countdown-label {
-            color: #fff;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .countdown {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-
-            .countdown-item {
-                min-width: 80px;
-            }
-
-            .countdown-number {
-                font-size: 2.5rem;
-            }
-
-            .title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {{-- Favicon --}}
+    <link rel="icon" type="image/png" href="{{ asset('cs/images/icons/favicon.ico') }}"/>
+    
+    {{-- CSS --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/vendor/animate/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/vendor/select2/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/vendor/countdowntime/flipclock.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cs/css/main.css') }}">
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="countdown-container">
-        <h1 class="title">Coming Soon</h1>
-        <div class="countdown">
-            <div class="countdown-item">
-                <div class="countdown-number" id="days">00</div>
-                <div class="countdown-label">Days</div>
+    <div class="bg-img1 size1 overlay1 p-b-35 p-l-15 p-r-15" style="background-image: url('{{ asset('cs/images/bg02.png') }}');">
+        <div class="flex-col-c p-t-160 p-b-215 respon1">
+            <div class="wrappic1">
+                <a href="#">
+                    <h1 style="color:white;"><b>PalPod</b></h1>
+                </a>
             </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="hours">00</div>
-                <div class="countdown-label">Hours</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="minutes">00</div>
-                <div class="countdown-label">Minutes</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="seconds">00</div>
-                <div class="countdown-label">Seconds</div>
-            </div>
+
+            <h3 class="l1-txt1 txt-center p-t-30 p-b-100">
+                Coming Soon
+            </h3>
+
+            <div class="cd100"></div>
+        </div>
+
+        <div class="flex-w flex-c-m p-b-35">
+            <a href="https://www.instagram.com/palpod.ugm?igsh=MTIzYm1nbGNyeTlqNw==" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5">
+                <i class="fa fa-instagram"></i>
+            </a>
+
+            <a href="#" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5">
+                <i class="fa fa-twitter"></i>
+            </a>
+
+            <a href="#" class="size3 flex-c-m how-social trans-04 m-r-3 m-l-3 m-b-5">
+                <i class="fa fa-youtube-play"></i>
+            </a>
         </div>
     </div>
 
+    {{-- Scripts --}}
+    <script src="{{ asset('cs/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ asset('cs/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/select2/select2.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/countdowntime/flipclock.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/countdowntime/moment.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/countdowntime/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/countdowntime/moment-timezone-with-data.min.js') }}"></script>
+    <script src="{{ asset('cs/vendor/countdowntime/countdowntime.js') }}"></script>
+    
     <script>
-        // Set the date we're counting down to 13-12-2024 00:00:00
-        const countDownDate = new Date("Dec 13, 2024 18:00:00").getTime();
-
-        // Update the countdown every 1 second
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-
-            // Calculate days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the results
-            document.getElementById("days").textContent = String(days).padStart(2, '0');
-            document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-            document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-
-            // If the countdown is finished, clear the interval
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
+        $('.cd100').countdown100({
+            endtimeYear: 0,
+            endtimeMonth: 0,
+            endtimeDate: 0,
+            endtimeHours: 12,
+            endtimeMinutes: 50,
+            endtimeSeconds: 15,
+            timeZone: "" 
+        });
     </script>
+    
+    <script src="{{ asset('cs/vendor/tilt/tilt.jquery.min.js') }}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
