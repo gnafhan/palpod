@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         //
         Spotify::create([
-            "link" => "3uogFvwWTjkvHNQCMLZMqd",
+            "link" => "0383ZXseCieN99WDVOX48c",
         ]);
     }
 }

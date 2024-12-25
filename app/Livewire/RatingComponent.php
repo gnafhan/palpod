@@ -43,6 +43,10 @@ class RatingComponent extends Component
     }
     public function mount($spotifyId)
     {
+         // if spotify id not found redirect to not found page
+         if (!Spotify::find($this->spotifyId)) {
+            return redirect('/404');
+        }
         $this->spotifyId = $spotifyId;
     }
     public function render()
