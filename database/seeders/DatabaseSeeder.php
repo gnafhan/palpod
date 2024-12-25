@@ -23,5 +23,9 @@ class DatabaseSeeder extends Seeder
         Spotify::create([
             "link" => "0383ZXseCieN99WDVOX48c",
         ]);
+
+        Spotify::create([
+            "link" => "4A7AeJub92JSRDIpaXJTeR",
+        ]);
     }
 }
