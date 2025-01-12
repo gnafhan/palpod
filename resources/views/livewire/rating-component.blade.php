@@ -91,10 +91,19 @@ function timeAgo($time, $short = false)
     return "$time";
 } ?>
 
+@push('style')
+<style>
+  .bg-card{
+      border-radius: 40px;
+      background: linear-gradient(102deg, #155458 8.98%, #068790 128.45%);
+  }
+</style>
+@endpush
+
 <div>
     <div class="modal show" tabindex="-1" role="dialog" style="display: block; --bs-modal-width: 800px; position: relative; z-index: 0;">
         <div class="modal-dialog" style="" >
-            <div class="modal-content mb-3 shadow rounded" style="border: none !important; border-radius: 24px !important">
+            <div class="modal-content mb-3 shadow rounded bg-card" style="border: none !important; border-radius: 40px !important">
                 <form wire:submit="store">
                     <iframe style="border-radius:28px" src="https://open.spotify.com/embed/episode/{{$spotify->link}}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <div class="modal-body">
@@ -104,8 +113,8 @@ function timeAgo($time, $short = false)
                         </div>
                         @endif
                         <div class="d-flex justify-content-between">
-                            <label class="form-label" style=""><h5 style="font-weight: 700">Leave a Review</h5></label>
-                            <div class="card-title" style="display: inline-block">
+                            <label class="form-label" style=""><h5 style="font-weight: 700; color: white">Leave a Review</h5></label>
+                            <div class="card-title" style="display: inline-block; color: white">
                                 <span>{{$rate}}</span>
                             <span class="fa fa-star {{$rate >=0.5 ? 'checked' : ''}}"></span>
                     <span class="fa fa-star {{$rate >=1.5 ? 'checked' : ''}}"></span>
@@ -115,7 +124,7 @@ function timeAgo($time, $short = false)
                             </div>
                         </div>
                         <div class="mb-1" style="display:flex;align-items : center;">
-                            <label class="form-label" style="margin-right: 10px; font-size: 16px">Your Rating </label>
+                            <label class="form-label" style="margin-right: 10px; font-size: 16px; color: white">Your Rating </label>
                             <fieldset style="display: inline-block;">
                                 <span class="star-cb-group" id="rating">
                                     <input type="radio" id="rating-5" wire:model="rating" name="rating" value="5" required /><label for="rating-5">5</label>
@@ -141,7 +150,7 @@ function timeAgo($time, $short = false)
             @if ($ratings)
             @foreach ($ratings as $key => $rating)
             <div class="">
-                <div class="modal-content card mb-3 shadow" style="border: none !important; max-width: 100%; border-radius: 30px">
+                <div class="modal-content card mb-3 shadow " style="border: none !important; max-width: 100%; border-radius: 30px; background-color: var(--primary-color); color: white">
                     <div class="row g-0">
                         <div class="col-1 d-flex justify-content-end align-items-start" style="margin-top: 16px">
                             <img src="/avatar.png" style=" width: 50px" class="img-fluid rounded-circle" alt="...">
