@@ -22,4 +22,14 @@ class Spotify extends Model
     protected $casts = [
         'published_at' => 'datetime',
     ];
+
+    public function rating()
+    {
+        return $this->hasMany(Rating::class);
+    }
+
+    public function averageRating()
+    {
+        return $this->rating()->avg('rating');
+    }
 }

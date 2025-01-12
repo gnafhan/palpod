@@ -19,7 +19,7 @@
                 </div>
             </div>
             
-            <a href="#" class="text-info text-decoration-none">View Review</a>
+            <a href="{{ route('podcast.detail', $id) }}" class="text-info text-decoration-none">View Detail</a>
             
             {{-- <div class="d-flex justify-content-between mt-4">
                 <div class="d-flex gap-3">

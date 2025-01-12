@@ -62,4 +62,4 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get("/", [HomeController::class, "index"])->name("home");
-Route::get("/podcast-episode/{spotifyId}", RatingComponent::class);
+Route::get("/podcast-episode/{spotifyId}", RatingComponent::class)->name("podcast.detail");

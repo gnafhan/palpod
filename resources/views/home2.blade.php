@@ -37,6 +37,17 @@
         padding-right: 16px;
     }
 
+    .line-clamp-2{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+    }
+
+    .width-responsive {
+        width: 70%;
+    }
+
     @media (max-width: 768px) {
         .hide_mobile {
             display: none;
@@ -64,6 +75,11 @@
             padding-left: 0px !important;
             padding-right: 0px !important;
         }
+
+        .width-responsive {
+            width: 100%;
+        }
+
     }
 </style>
 @endpush
@@ -73,48 +89,31 @@
             <div class="hide_mobile" style="width: 30%" >
                 <livewire:side-component />
             </div>
-            <div>
+            <div class="width-responsive">
 
             <h1 class="text-white mb-4 text-listen" style="font-size: 40px">Listen all episode Now!</h1>
 
             <div class="episodes">
-                @php
-                    $episodes = [
-                        [
-                            'number' => 1,
-                            'title' => 'Apa itu PALPOD? Kupas tuntas latar belakang hingga isi konten dari palpod',
-                            'description' => 'Lorem ipsum dolor sit amet consectetur. Volutpat morbi et cras nunc ut etiam nec elementum. Et diam non etiam fermentum risus libero...',
-                            'date' => '20 Dec 2024'
-                        ],
-                        [
-                            'number' => 2,
-                            'title' => 'Inpirasi mahasiswa juara: Cerita sukses di Samsung Solve for Tomorrow',
-                            'description' => 'Lorem ipsum dolor sit amet consectetur. Volutpat morbi et cras nunc ut etiam nec elementum. Et diam non etiam fermentum risus libero...',
-                            'date' => '20 Dec 2024'
-                        ],
-                        // Add more episodes as needed
-                    ];
-                @endphp
 
-                @foreach($episodes as $episode)
-                    <div class="card mb-3 card-item rounded" style="border: none !important; border-radius: 24px !important;">
+                @foreach($episodes as $index => $episode)
+                    <a href="{{ route('podcast.detail', $episode['id']) }}" class="card mb-3 card-item rounded" style="border: none !important; border-radius: 24px !important;">
                         <div class="card-body d-flex align-items-center item-pod gap-3">
                             <img src="/img-palpod.png" class="img-fluid2" alt="Episode thumbnail" style="object-fit: cover; border-radius: 12px" class="">
                             <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <small class="text-secondary">Episode {{ $episode['number'] }}</small>
-                                    <small class="text-secondary">{{ $episode['date'] }}</small>
+                                    <small class="text-secondary">Episode {{ $index + 1 }}</small>
+                                    <small class="text-secondary">{{ $episode['published_at'] ? $episode['published_at']->format('d M Y') : '' }}</small>
                                 </div>
                                 <h5 class="card-title text-white mb-2">{{ $episode['title'] }}</h5>
-                                <p class="card-text text-secondary mb-0">{{ $episode['description'] }}</p>
+                                <p class="card-text text-secondary mb-0 line-clamp-2">{{ $episode['description'] }}</p>
                             </div>
                             {{-- <button class="btn btn-custom rounded-circle ms-3" style="width: 48px; height: 48px">
                                 <i class="fas fa-play"></i>
                             </button> --}}
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <hr class="text-secondary">
                 @endforeach
             </div>

@@ -44,8 +44,8 @@ export default function Index({ auth, spotifies }) {
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     {spotifies.data.map((spotify) => (
                                         <tr key={spotify.id}>
-                                            <td className="px-6 py-4 whitespace-nowrap">{spotify.title}</td>
-                                            <td className="px-6 py-4">{spotify.description}</td>
+                                            <td className="px-6 py-4">{spotify.title}</td>
+                                            <td className="px-6 py-4 ">{spotify.description}</td>
                                             <td className="px-6 py-4">
                                                 <a href={spotify.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-900">
                                                     {spotify.link}
